@@ -26,18 +26,28 @@ const columns2 = ref([]);
 const buttons1 = ref([]);
 const buttons2 = ref([]);
 const report = ref('1');
-const types = ref([{'id':'1','name':'Employees'},{'id':'2','name':'Departments'}]);
+const types = ref([{'id':'1','Modelo':'Employees'},{'id':'2','Modelo':'Departments'}]);
 
 columns1.value= [{data:null,render:function(data,type,row,meta)
     {return (meta.row + 1)}},
-    {data:'name'},
-    {data:'email'},
-    {data:'phone'},
-    {data:'department'},
+    {data:'Modelo'},
+    {data:'Estado'},
+    {data:'fechaFabricacion'},
+    {data:'tipoAsistencia'},
+    {data:'fechaInstalacion'},
+    {data:'tipoMantenimiento'},
+    {data:'fechaMantenimiento'},
+    {data:'tipoPieza'},
+    {data:'fechaCambioPieza'},
+    {data:'numeroCiclos'},
+    {data:'fechaIncidente'},
+    {data:'Telefono'},
+    {data:'Observaciones'},
+    {data:'Img'},
 ]
 columns2.value= [{data:null,render:function(data,type,row,meta)
     {return (meta.row + 1)}},
-    {data:'name'}
+    {data:'Serial'}
 ]
 buttons1.value= [
     {
@@ -109,10 +119,20 @@ buttons2.value= [
                     <thead>
                         <tr class="bg-gray-100">
                             <th class="px-2 py-2">Nro</th>
-                            <th class="px-2 py-2">NOMBRES</th>
-                            <th class="px-2 py-2">CORREO</th>
-                            <th class="px-2 py-2">TELEFONO</th>
-                            <th class="px-2 py-2">DEPARTMENTO</th>
+                            <th class="px-2 py-2">Modelo</th>
+                            <th class="px-2 py-2">Estado</th>
+                            <th class="px-2 py-2">fechaFabricacion</th>
+                            <th class="px-2 py-2">tipoAsistencia</th>
+                            <th class="px-2 py-2">fechaInstalacion</th>
+                            <th class="px-2 py-2">tipoMantenimiento</th>
+                            <th class="px-2 py-2">fechaMantenimiento</th>
+                            <th class="px-2 py-2">tipoPieza</th>
+                            <th class="px-2 py-2">fechaCambioPieza</th>
+                            <th class="px-2 py-2">numeroCiclos</th>
+                            <th class="px-2 py-2">fechaIncidente</th>
+                            <th class="px-2 py-2">Telefono</th>
+                            <th class="px-2 py-2">Observaciones</th>
+                            <th class="px-2 py-2">Img</th>
                         </tr>
                     </thead>
                     </DataTable>

@@ -8,6 +8,7 @@ import { Head,useForm } from '@inertiajs/vue3';
 
 const props = defineProps({ department:{type:Object}});
 const form = useForm({
+    Serial: props.department.Serial,
     Pais: props.department.Pais,
     Ciudad: props.department.Ciudad,
     Institucion: props.department.Institucion,
@@ -19,7 +20,7 @@ const form = useForm({
 </script>
 
 <template>
-    <Head title="Editar Departmento" />
+    <Head title="Editar Departamento" />
 
     <AuthenticatedLayout>
         <template #header>

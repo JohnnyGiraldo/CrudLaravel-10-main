@@ -29,7 +29,9 @@ const deleteDepartment = (id,Serial) =>{
         cancelButtonText:'<i class="fa-solid fa-ban"></i> Cancelar',
     }).then((result) => {
         if(result.isConfirmed) {
-            form.delete(route('departments.destroy',id));
+           form.delete(route('employees.destroy', {id: id, employee: employeeId}), {
+    onSuccess: () => { ok('Maceradora Eliminado') }
+});
         }
     });
 }

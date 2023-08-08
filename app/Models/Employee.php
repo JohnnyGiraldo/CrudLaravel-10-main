@@ -9,5 +9,5 @@ class Employee extends Model
 {
     use HasFactory;
     // campos que podran ser llenados masivamente
-    protected $fillable = ['name', 'email', 'phone', 'department_id'];
+    protected $fillable = ['Serial', 'Modelo', 'Estado','fechaFabricacion', 'department_id'];
 }

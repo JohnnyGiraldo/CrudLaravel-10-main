@@ -25,7 +25,7 @@ const props = defineProps({
     departments: {type:Object}
 });
 const form = useForm({
-    Modelo:'', Estado:'',fechaFabricacion:'',tipoAsistencia:'',fechaInstalacion:'',tipoMantenimiento:'',fechaMantenimiento:'',tipoPieza:'',fechaCambioPieza:'',numeroCiclos:'',fechaIncidente:'',Telefono:'',Observaciones:'',Img:'',department_id:''
+    Serial:'', Modelo:'', Estado:'',fechaFabricacion:'',tipoAsistencia:'',fechaInstalacion:'',tipoMantenimiento:'',fechaMantenimiento:'',tipoPieza:'',fechaCambioPieza:'',numeroCiclos:'',fechaIncidente:'',Telefono:'',Observaciones:'',Img:'',department_id:''
 });
 const formPage = useForm({});
 const onPageClick = (event)=>{
@@ -41,6 +41,7 @@ const openModal = (op,Serial,Modelo,fechaFabricacion,tipoAsistencia,fechaInstala
     }
     else{
         title.value = 'Editar Maceradora';
+        form.Serial=Serial;
         form.Modelo=Modelo;
         form.Estado=Estado;
         form.fechaFabricacion=fechaFabricacion;
@@ -210,7 +211,7 @@ const deleteEmployee = (id,Serial) =>{
                 placeholder="tipo de Asistencia"></TextInput>
                 <InputError :message="form.errors.tipoAsistencia" class="mt-2"></InputError>
             </div>
-            div class="p-3">
+            <div class="p-3">
                 <InputLabel for="fechaInstalacion" value="fecha de Instalacion:"></InputLabel>
                 <TextInput id="fechaInstalacion"
                 v-model="form.fechaInstalacion" type="text" class="mt-1 block w-3/4"
@@ -221,7 +222,7 @@ const deleteEmployee = (id,Serial) =>{
                 <InputLabel for="tipoMantenimiento" value="tipo de Mantenimiento:"></InputLabel>
                 <TextInput id="tipoMantenimiento"
                 v-model="form.tipoMantenimiento" type="text" class="mt-1 block w-3/4"
-                placeholder=tipo de Mantenimiento"></TextInput>
+                placeholder="tipo de Mantenimiento"></TextInput>
                 <InputError :message="form.errors.tipoMantenimiento" class="mt-2"></InputError>
             </div>
                 <div class="p-3">
@@ -273,7 +274,6 @@ const deleteEmployee = (id,Serial) =>{
                 placeholder="Observaciones"></TextInput>
                 <InputError :message="form.errors.Observaciones" class="mt-2"></InputError>
             </div>
-            </div>
                 <div class="p-3">
                 <InputLabel for="Img" value="Imagen:"></InputLabel>
                 <TextInput id="Img"
@@ -281,7 +281,7 @@ const deleteEmployee = (id,Serial) =>{
                 placeholder="Imgagen"></TextInput>
                 <InputError :message="form.errors.Img" class="mt-2"></InputError>
             </div>
-            <div class="p-3">
+                <div class="p-3">
                 <InputLabel for="department_id" value="Departamento:"></InputLabel>
                 <SelectInput id="department_id" :options="departments"
                 v-model="form.department_id" type="text" class="mt-1 block w-3/4"

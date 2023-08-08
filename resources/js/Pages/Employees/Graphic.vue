@@ -23,7 +23,7 @@ const random = () => {
 };
 
 props.data.map((row) => {
-  departments.value.push(row.name);
+  departments.value.push(row.Serial);
   employees.value.push(row.count);
   colors.value.push("rgb("+random()+","+random()+","+random()+")");
 });

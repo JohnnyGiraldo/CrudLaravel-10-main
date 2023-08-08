@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('Pais', 255);
             $table->string('Ciudad', 255);
             $table->string('Institucion', 255);
-            $table->string('Telefono', 20);
+            $table->string('Telefono', 20)->default('valor_por_defecto');
             $table->string('Direccion', 255);
             $table->string('ubicacionEquipo', 255);
             $table->integer('Piso')->nullable();

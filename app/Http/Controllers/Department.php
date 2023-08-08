@@ -10,5 +10,5 @@ class Department extends Model
     use HasFactory;
     // se indican los campos que se van a poder llenar masivamente
     // en este caso solo sera el nombre
-    protected $fillable = ['name'];
+    protected $fillable = ['Serial'];
 }
