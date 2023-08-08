@@ -191,16 +191,9 @@ const deleteEmployee = (id,Serial) =>{
                 <InputError :message="form.errors.Modelo" class="mt-2"></InputError>
             </div>
             <div class="p-3">
-                <InputLabel for="Estado" value="Correo:"></InputLabel>
-                <TextInput id="Estado"
-                v-model="form.Estado" type="text" class="mt-1 block w-3/4"
-                placeholder="Email"></TextInput>
-                <InputError :message="form.errors.Estado" class="mt-2"></InputError>
-            </div>
-            <div class="p-3">
                 <InputLabel for="fechaFabricacion" value="fecha de Fabricacion:"></InputLabel>
                 <TextInput id="fechaFabricacion"
-                v-model="form.fechaFabricacion" type="text" class="mt-1 block w-3/4"
+                v-model="form.fechaFabricacion" type="date" class="mt-1 block w-3/4"
                 placeholder="Fecha de Fabricación"></TextInput>
                 <InputError :message="form.errors.fechaFabricacion" class="mt-2"></InputError>
             </div>
@@ -214,7 +207,7 @@ const deleteEmployee = (id,Serial) =>{
             <div class="p-3">
                 <InputLabel for="fechaInstalacion" value="fecha de Instalacion:"></InputLabel>
                 <TextInput id="fechaInstalacion"
-                v-model="form.fechaInstalacion" type="text" class="mt-1 block w-3/4"
+                v-model="form.fechaInstalacion" type="date" class="mt-1 block w-3/4"
                 placeholder="fecha de Instalacion"></TextInput>
                 <InputError :message="form.errors.fechaInstalacion" class="mt-2"></InputError>
             </div>
@@ -228,7 +221,7 @@ const deleteEmployee = (id,Serial) =>{
                 <div class="p-3">
                 <InputLabel for="fechaMantenimiento" value="fecha de Mantenimiento:"></InputLabel>
                 <TextInput id="fechaMantenimiento"
-                v-model="form.fechaMantenimiento" type="text" class="mt-1 block w-3/4"
+                v-model="form.fechaMantenimiento" type="date" class="mt-1 block w-3/4"
                 placeholder="fecha de Mantenimiento"></TextInput>
                 <InputError :message="form.errors.fechaMantenimiento" class="mt-2"></InputError>
             </div>
@@ -242,28 +235,28 @@ const deleteEmployee = (id,Serial) =>{
                 <div class="p-3">
                 <InputLabel for="fechaCambioPieza" value="fecha Cambio de Pieza:"></InputLabel>
                 <TextInput id="fechaCambioPieza"
-                v-model="form.fechaCambioPieza" type="text" class="mt-1 block w-3/4"
+                v-model="form.fechaCambioPieza" type="date" class="mt-1 block w-3/4"
                 placeholder="fecha Cambio de Pieza"></TextInput>
                 <InputError :message="form.errors.fechaCambioPieza" class="mt-2"></InputError>
             </div>
                 <div class="p-3">
                 <InputLabel for="numeroCiclos" value="numero de Ciclos:"></InputLabel>
                 <TextInput id="numeroCiclos"
-                v-model="form.numeroCiclos" type="text" class="mt-1 block w-3/4"
+                v-model="form.numeroCiclos" type="number" class="mt-1 block w-3/4"
                 placeholder="numero de Ciclos"></TextInput>
                 <InputError :message="form.errors.numeroCiclos" class="mt-2"></InputError>
             </div>
                 <div class="p-3">
                 <InputLabel for="fechaIncidente" value="fecha del Incidente:"></InputLabel>
                 <TextInput id="fechaIncidente"
-                v-model="form.fechaIncidente" type="text" class="mt-1 block w-3/4"
+                v-model="form.fechaIncidente" type="date" class="mt-1 block w-3/4"
                 placeholder="fecha del Incidente"></TextInput>
                 <InputError :message="form.errors.fechaIncidente" class="mt-2"></InputError>
             </div>
                 <div class="p-3">
                 <InputLabel for="Telefono" value="Teléfono:"></InputLabel>
                 <TextInput id="Telefono"
-                v-model="form.Telefono" type="text" class="mt-1 block w-3/4"
+                v-model="form.Telefono" type="tel" class="mt-1 block w-3/4"
                 placeholder="Teléfono"></TextInput>
                 <InputError :message="form.errors.Telefono" class="mt-2"></InputError>
             </div>
